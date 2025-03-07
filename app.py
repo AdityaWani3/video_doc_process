@@ -11,6 +11,18 @@ def save_uploaded_file(uploaded_file, save_path):
         f.write(uploaded_file.getbuffer())
     return save_path
 
+hide_github_icon = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.css-1v3fvcr {visibility: hidden;}
+</style>
+"""
+
+# Inject custom CSS
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 st.markdown(
         """
         <style>
